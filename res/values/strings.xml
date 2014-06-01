@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Porfolyo</string>
+    
+    <string name="action_about">About</string>
+    
+    <string name="content_descriptor"></string>
+    
+    <string name="lorem_ipsum_paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus ligula, placerat in condimentum eu, consectetur vitae nisi. Quisque vulputate urna bibendum lorem mattis facilisis. Suspendisse potenti. Cras erat ligula, mattis at faucibus eget, consectetur eu felis. Nullam vitae lobortis massa. Fusce tristique ipsum turpis, suscipit aliquam justo porttitor a. Pellentesque dignissim hendrerit libero non rutrum.</string>
+	<string name="lorem_ipsum_words">Lorem ipsum dolor sit amet.</string>
+    
+    <string name="section_intro">Intro</string>
+    <string name="section_experience">Experience</string>
+    <string name="section_skills">Skills</string>
+    <string name="section_works">Works</string>
+    <string name="section_rates">Rates</string>
+    <string name="section_contacts">Contacts</string>
+    <string name="section_references">References</string>
+    
+    <string name="intro_title">Hi, I\'m Julious Igmen</string>
+    <string name="intro_subtitle">I am an <i>Interactive Apps Developer</i></string>
+    <string name="intro_phrase"></string>
+    
+    <string name="skill_header_technical">Technical</string>
+    <string name="skill_header_non_technical">Non-technical</string>
+    
+    <string name="skill_android">Android</string>
+    <string name="skill_blackberry">Blackberry</string>
+    <string name="skill_java">Java</string>
+    <string name="skill_actionscript">Actionscript</string>
+    <string name="skill_flash">Flash</string>
+    <string name="skill_sql">SQL</string>
+    <string name="skill_php">PHP</string>
+    <string name="skill_html">HTML</string>
+    <string name="skill_css">CSS</string>
+    <string name="skill_javascript">Javascript</string>
+    <string name="skill_photohshop">Photoshop</string>
+    <string name="skill_illustrator">Illustrator</string>
+    
+    <string name="skill_communication">Communications (English/Filipino)</string>
+    <string name="skill_leadership">Leadership and Management</string>
+    <string name="skill_design">Design and Analysis</string>
+    <string name="skill_writing">Creative Writing</string>
+    <string name="skill_drawing">Drawings and Illustrations</string>
+    
+    <string-array name="experiences1">
+        <item >TL - Application Development|Zezmo Interactive|March 2013 - May 2014</item>
+        <item >Mobile Applications Developer|OrangeFix|December 2012 - May 2014</item>
+        <item >TL - Flash Developers|Design Muscle|August 2011 - March 2013 </item>
+    </string-array>
+
+</resources>
