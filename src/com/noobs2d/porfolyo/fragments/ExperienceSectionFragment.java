@@ -13,27 +13,10 @@ import com.noobs2d.porfolyo.models.Experience;
 
 public class ExperienceSectionFragment extends ListFragment {
 
-    private ArrayList<Experience> experiences;
+    protected ArrayList<Experience> experiences;
 
     public ExperienceSectionFragment() {
 	experiences = new ArrayList<Experience>();
-    }
-
-    public Experience extractExperienceFromUnformattedString(String unformattedString) {
-	// each string MUST be split into three indexes
-	final int TITLE = 0, COMPANY = 1, DURATION = 2;
-
-	String[] bundle = unformattedString.split("\\|", -1); // -1 so it doesn't have a limit
-	String title = bundle[TITLE];
-	String company = bundle[COMPANY];
-	String duration = bundle[DURATION];
-	Experience experience = new Experience(company, duration, title);
-
-	return experience;
-    }
-
-    public ArrayList<Experience> getExperiences() {
-	return experiences;
     }
 
     public boolean isExperienceValid(Experience experience) {
@@ -61,27 +44,27 @@ public class ExperienceSectionFragment extends ListFragment {
     }
 
     @Override
-    public void onListItemClick(ListView l, View v, int position, long id) {
-	// TODO set the list adapter
-	super.onListItemClick(l, v, position, id);
-    }
-
-    /** Turns the String array of experience data from {@link R.array.experiences} into an {@link Experience} 
-     * instance then adds them into {@link ExperienceSectionFragment#experiences}. */
-    public void retrieveExperiences() throws ArrayIndexOutOfBoundsException, StringIndexOutOfBoundsException {
-	String[] experiencesArray = getResources().getStringArray(R.array.experiences1);
-	// each item in the array is split by a |
-	// each item is an item in an Experience instance
-	for (int i = 0; i < experiencesArray.length; i++) {
-	    Experience experience = extractExperienceFromUnformattedString(experiencesArray[i]);
-	    if (isExperienceValid(experience))
-		experiences.add(experience);
-	}
+    public void onListItemClick(ListView listView, View view, int position, long id) {
+	super.onListItemClick(listView, view, position, id);
+	// TODO add a DialogFragment upon clicking an item
     }
 
     private void removeListDividers() {
 	getListView().setDivider(null);
 	getListView().setDividerHeight(0);
+    }
+
+    /** Turns the String array of experience data from {@link R.array.experiences} into an {@link Experience} 
+     * instance then adds them into {@link ExperienceSectionFragment#experiences}. */
+    protected void retrieveExperiences() throws ArrayIndexOutOfBoundsException, StringIndexOutOfBoundsException {
+	String[] experiencesArray = getResources().getStringArray(R.array.experiences);
+	// each item in the array is split by a |
+	// each item is an item in an Experience instance
+	for (int i = 0; i < experiencesArray.length; i++) {
+	    Experience experience = new Experience(experiencesArray[i]);
+	    if (isExperienceValid(experience))
+		experiences.add(experience);
+	}
     }
 
 }
